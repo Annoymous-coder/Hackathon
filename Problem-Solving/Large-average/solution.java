@@ -7,8 +7,8 @@ class solutionNaive {
        int T = sc.nextInt();
        while(T>0)
        {   System.out.println("Enter range i.e L and R");
-           long L = sc.nextInt();
-           long R = sc.nextInt();
+           long L = sc.nextLong();
+           long R = sc.nextLong();
            long avg =0;
            long n = 2; //L and R
            avg = (L+R)/n;
