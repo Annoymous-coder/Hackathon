@@ -1,0 +1,41 @@
+The average is defined as the sum of all the numbers divided (integer division) by the total numbers that are included to determine the average. Therefore, your task is to determine the average of all naturals number from to
+
+both inclusive.
+
+For example, all the natural numbers from 3 to 8 
+to are , then the average is 3+4+5+6+7+8/6 = 5
+
+.
+
+Input format
+
+    First line: 
+
+denoting the number of test cases
+Next
+lines: Two space-separated integers  and
+
+     as described in the problem statement
+
+Output format
+
+Print
+
+lines containing a single integer that denotes the required answer.
+
+Constraints
+
+SAMPLE INPUT
+
+3
+3 8
+0 10
+1234 5678
+
+SAMPLE OUTPUT
+
+5
+5
+3456
+
+Explanation
