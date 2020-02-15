@@ -1,0 +1,63 @@
+Insted of using a for loop and then breaking down a string or for that matter doing any list operations using for or while loops can be done using a list comprehension method itself.
+
+example of finding all even nos in range 0 - 10 would definitely require a for loop which can be simplified within a loop itself.
+
+Syntax:
+
+list = [ listVariable/forVariable for var in range(x,x) ] 
+
+if condition:
+
+>>> lis = [ ["even" , i] for i in range(0,10) if i%2==0 ]
+>>> print lis
+[['even', 0], ['even', 2], ['even', 4], ['even', 6], ['even', 8]]
+
+Instead of 
+>>>for i range(10):
+	if i%2==0:
+		lis.append["even",i]
+
+if-else condition:
+
+Notice that the if and else condition within a for loop comes first;
+
+>>> lis = [ ["even",i] if i%2==0 else ["odd",i] for i in range(10)]
+>>> print lis
+[['even', 0], ['odd', 1], ['even', 2], ['odd', 3], ['even', 4], ['odd', 5], ['even', 6], ['odd', 7], ['even', 8], ['odd', 9]]
+
+Instead of
+>>>for i in range(10):
+	if i%2==0:
+		lis.append["even",i]
+	else:
+		lis.append["odd",i]
+
+Nested-If
+
+To print the nos which are divisible by 2 and 5
+
+>>>lis = [i for i in range(10) if i%2==0 if i%5==0 ]
+>>>[0]
+
+Nested-For 
+
+To Print the transpose of a matrix (Rows to Columns);
+Have to write the nested statements first later the outer loop;
+
+>>>lis = [ [0,1],[2,3],[4,5] ]
+>>>for row in lis:
+	print row
+[0,1]
+[2,3]
+[4,5]
+
+By applying list comprehensions
+>>>res = [ [ lis[j][i] for j in range(len(lis)) ] for i in range(len(lis[0])) ]
+>>>for row in res:
+	print row
+[0,2,4]
+[1,3,5]
+
+
+
+
