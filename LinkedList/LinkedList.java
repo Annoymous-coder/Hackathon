@@ -24,6 +24,34 @@ class LinkedList
 		n.next = node;		     //link the last node to the new node.
 		}
 	}
+	 void insertAtStart(int data)
+	 {
+		 Node node = new Node();
+		 node.data=data;
+		 node.next=null;
+		 node.next=head;
+		 head=node;
+	 }
+	  
+	 void insertAt(int index, int data)
+	 {
+		 Node node = new Node();
+		 node.data=data;
+		 node.next=null;
+		 
+		 Node temp = head;
+		 if(index==0)
+		 {
+			 insertAtStart(data);
+		 }
+		 for(int i=0;i<index-1;i++)
+		 {
+			 temp=temp.next;                 
+		 }                                    
+		 node.next=temp.next;
+		 temp.next=node;
+	 }
+
 	public void show()		     //method to display the data in the list.
 	{			
 		Node n = head;		     //n is the temporary node and intialized to head. Since head is the first node.		
