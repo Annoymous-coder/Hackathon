@@ -1,4 +1,4 @@
-package practice;
+//package practice;
 
 public class Runner {
 	public static void main(String args[])
