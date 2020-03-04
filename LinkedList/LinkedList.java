@@ -24,23 +24,23 @@ class LinkedList
 		n.next = node;		     //link the last node to the new node.
 		}
 	}
-	 void insertAtStart(int data)
+	 void insertAtStart(int data)        //add node at start
 	 {
 		 Node node = new Node();
 		 node.data=data;
 		 node.next=null;
-		 node.next=head;
-		 head=node;
+		 node.next=head;             //make node to point existing head
+		 head=node;		     //make node as head
 	 }
 	  
-	 void insertAt(int index, int data)
+	 void insertAt(int index, int data)	//add node at given index
 	 {
 		 Node node = new Node();
 		 node.data=data;
 		 node.next=null;
 		 
 		 Node temp = head;
-		 if(index==0)
+		 if(index==0)			//if index=0 and without for loop the node is inserted at the head+1 pos.
 		 {
 			 insertAtStart(data);
 		 }
@@ -48,8 +48,8 @@ class LinkedList
 		 {
 			 temp=temp.next;                 
 		 }                                    
-		 node.next=temp.next;
-		 temp.next=node;
+		 node.next=temp.next;		//make the node point to existing temp.next .
+		 temp.next=node;		//make the temp point to new node.
 	 }
 
 	public void show()		     //method to display the data in the list.
