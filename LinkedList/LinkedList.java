@@ -51,6 +51,26 @@ class LinkedList
 		 node.next=temp.next;		//make the node point to existing temp.next .
 		 temp.next=node;		//make the temp point to new node.
 	 }
+	 void deleteAt(int index)
+	 {
+		if(index == 0)
+		{
+			head = head.next;
+		}
+		else
+		{
+			Node temp = head;
+			Node deleteNode = null;
+			for(int i=0; i<index-1; i++)
+			{
+				temp = temp.next;
+			}
+			deleteNode = temp.next;
+			temp.next = deleteNode.next;
+			System.out.println("The deleted node is "+deleteNode.data);
+			deleteNode = null;
+		}
+	 }
 
 	public void show()		     //method to display the data in the list.
 	{			
