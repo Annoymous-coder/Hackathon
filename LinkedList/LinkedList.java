@@ -51,24 +51,24 @@ class LinkedList
 		 node.next=temp.next;		//make the node point to existing temp.next .
 		 temp.next=node;		//make the temp point to new node.
 	 }
-	 void deleteAt(int index)
+	 void deleteAt(int index)		//method to delete a node at given pos
 	 {
-		if(index == 0)
+		if(index == 0)			//change head link if index=0.
 		{
 			head = head.next;
 		}
 		else
 		{
-			Node temp = head;
-			Node deleteNode = null;
+			Node temp = head;			//temp node is used for traversing.
+			Node deleteNode = null;			//deleteNode is used for storing the address of the node to be deleted.
 			for(int i=0; i<index-1; i++)
 			{
 				temp = temp.next;
-			}
-			deleteNode = temp.next;
-			temp.next = deleteNode.next;
+			}	
+			deleteNode = temp.next;			//by temp.next we mean the node to be deleted.
+			temp.next = deleteNode.next;		//point the temp to next of deleteNode therefore skipping the deleteNode addressd
 			System.out.println("The deleted node is "+deleteNode.data);
-			deleteNode = null;
+			deleteNode = null;			//make deleteNode = null so it is eligible for garbage collection by Java.
 		}
 	 }
 
