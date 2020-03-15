@@ -71,7 +71,32 @@ class LinkedList
 			deleteNode = null;			//make deleteNode = null so it is eligible for garbage collection by Java.
 		}
 	 }
-
+	void removeDuplicates(Node head)
+	{
+		if(head==null)
+		{
+			System.out.println("no head");
+		}
+		else if(head.next==null)
+		{
+			System.out.println("only head");
+		}
+		else
+		{
+			Node back = head;  
+			Node front = head.next;  //front is not neccessary .
+			while(back.next!=null)
+			{	
+				if(back.data == front.data)
+				{
+					back.next = front.next;   //also back.next = back.next.next;
+					removeDuplicates(head);	  //recursive call
+				}
+				back = back.next;
+				front = back.next;
+			}
+		}
+	}
 	public void show()		     //method to display the data in the list.
 	{			
 		Node n = head;		     //n is the temporary node and intialized to head. Since head is the first node.		
