@@ -97,6 +97,34 @@ class LinkedList
 			}
 		}
 	}
+	void removeDuplicateNaive(Node head) {
+      //Write your code here
+      //Without use of recursive	 
+        
+        if(head == null)
+        {
+            System.out.println("Empty");
+        }
+        else if(head.next == null)
+        {
+            System.out.println("Only head");
+        }
+        else
+        {
+            Node temp = head;
+        while(temp.next!=null)
+        {   
+            if(temp.data == temp.next.data)
+            {
+                temp.next = temp.next.next;
+            }
+            else
+            {
+            temp = temp.next;
+            }
+         }
+       }
+    }
 	public void show()		     //method to display the data in the list.
 	{			
 		Node n = head;		     //n is the temporary node and intialized to head. Since head is the first node.		
