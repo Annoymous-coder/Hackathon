@@ -35,6 +35,21 @@ class Difference {
           }
 	}		
     }	
+	
+	!Update new solution with lesser TComplexity. O(n) - using a single for loop and two variables min and max which are intialiazed to INTEGER.MAX 
+	and INTEGER.MIN respectively
+	
+	void computeDifference()
+	{
+		int maxval = INTEGER.MIN;
+		int minval = INTEGER.MAX;
+		for(int i=0;i<elements.length;i++)
+		{
+			if(elements[i]>maxVal) maxVal = elements[i];
+			else if(elements[i]<minVal) minVal = elements[i];
+		}
+		maximumDifference = maxVal - minVal;
+	}
    
     */
 
