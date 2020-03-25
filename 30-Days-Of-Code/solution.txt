@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+
+interface AdvancedArithmetic{
+   int divisorSum(int n);
+}
+class Calculator implements AdvancedArithmetic {
+    public int divisorSum(int n) {
+        
+        int sum = 0;
+        for(float i=1;i<=n;i++)			//any two variables must be float/double for precision here i and div are in float thereofore ans is in float. ex n = 6 and i = 4 then div = 1.5 here ,if i was int it would result in the div - 1.0
+        {
+            float div = n/i;
+            if(div%2==0 || div%2==1.0)
+            {
+                 sum = sum + (int)div;
+            }
+        } 
+        return sum;
+    }
+}
+  public int divisorSum(int n) {	//Another way
+        
+        int sum = (n==1) ? 1 : n+1; 	//the sum is min of n itself and 1 but when n==1 n is 1 only.
+        for(float i=2;i<=n/2;i++)	//since the greatest divisor wont exceed the n/2 value, ex. for n = 6, 3 is max divisor.			
+        {
+            if(n%i==0) sum = sum + i;	//if the rem is 0 then add to sum, ex 6/6=0 , 6/1=0 but 6/4!=0.
+        } 
+        return sum;
+    }
+}
+
+	
+
+class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        scan.close();
+        
+      	AdvancedArithmetic myCalculator = new Calculator(); 
+        int sum = myCalculator.divisorSum(n);
+        System.out.println("I implemented: " + myCalculator.getClass().getInterfaces()[0].getName() );
+        System.out.println(sum);
+    }
+}
