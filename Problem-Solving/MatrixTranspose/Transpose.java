@@ -1,19 +1,32 @@
+package practice;
+
 import java.util.*;
-class Transpose
+
+class try1
 {
  public void doTranspose(int N,int M,int A[][])
  {
-   int B[][] = new int[N][M];
+   int B[][] = new int[M][N];
    for(int i=0;i<N;i++)
    {
     for(int j=0;j<M;j++)
-     {
-       B[i][j] = A[j][i];
-       System.out.print(B[i][j]+" ");
+     { 
+       System.out.println("i="+i+" j="+j);
+       B[j][i] = A[i][j];
+       display(B,N,M);
      }
-    System.out.println();
     }
-   
+  }
+  public void display(int [][]B, int N, int M)
+  {
+	  for(int i=0;i<M;i++)
+	   {
+	    for(int j=0;j<N;j++)
+	     {
+	       System.out.print(B[i][j]+"\t");
+	     }
+	    	System.out.println();
+	    }
   }
  public static void main(String args[])
  { 
@@ -31,7 +44,7 @@ class Transpose
        A[i][j] = sc.nextInt();
      }
    }
-  Transpose obj = new Transpose();
+  try1 obj = new try1();
   System.out.println("Transposed Matrix");
   obj.doTranspose(N,M,A);
  }
