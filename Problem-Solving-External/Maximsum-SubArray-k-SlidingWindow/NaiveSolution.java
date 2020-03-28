@@ -10,10 +10,15 @@ public class MaximumSubarrayWithWindowSizeK {
 		{	
 			wsum =0;
 			int j=i;
-			while(j<k+i)
+			/?while(j<k+i)
 			{
 				wsum += A[j];
 				j++;
+			}?/
+			
+			for(int j=i; j<k+i; j++)
+			{
+				wsum+=A[j];
 			}
 			maxNum = Math.max(wsum, maxNum);
 		}
