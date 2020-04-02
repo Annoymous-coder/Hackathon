@@ -1,3 +1,6 @@
+
+KADANE"S ALGORITHM , DYNAMIC PROGRAMMING
+
 class Solution {
     public int maxSubArray(int[] nums) {
 	// ans is the final result and currentsum is the sum of current window
