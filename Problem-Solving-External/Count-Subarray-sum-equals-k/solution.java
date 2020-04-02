@@ -1,3 +1,5 @@
+#LEETCODE 560
+Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
 class Solution {
     public int subarraySum(int[] nums, int k) {
         int count = 0;
