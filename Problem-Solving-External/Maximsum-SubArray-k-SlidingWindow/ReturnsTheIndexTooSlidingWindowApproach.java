@@ -1,28 +1,31 @@
-package practice;
+package practice;
 import java.util.*;
 public class MaximumSubarrayWithWindowSizeK {
 
 	public int getMax(int A[],int k)
 	{	
 		int maxNum = 0, wsum = 0;
+		int start = 0, end = 0;
 		
-		for(int i=0; i<A.length-k+1; i++)
+		for(int i=0;i<k;i++)
+		{
+			wsum+=A[i];
+			start = 0;
+			end = k-1;
+		}
+		for(int j=k;j<A.length;j++)
 		{	
-			wsum =0;
-			int j=i;
-			/?while(j<k+i)
-			{
-				wsum += A[j];
-				j++;
-			}?/
-			
-			for(int j=i; j<k+i; j++)
-			{
-				wsum+=A[j];
+			maxNum = wsum;
+			wsum = wsum - A[j-k] + A[j];
+			if(wsum > maxNum){
+				maxNum = wsum;
+				start = j-k+1;
+				end = j;
 			}
-			maxNum = Math.max(wsum, maxNum);
 		}
 		
+		
+		System.out.println(start+" "+end);
 		
 		return maxNum;
 	}
