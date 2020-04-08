@@ -1,0 +1,2 @@
+. Write a program to extract string from a file where the string should start with only uppercase
+letters and should end with a digit, and must contain a special character ^, anywhere in between
