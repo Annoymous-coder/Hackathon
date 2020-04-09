@@ -1,3 +1,8 @@
+
+//The main difference between this and Two-Sum-2 is that the array is not sorted here.
+
+//Naive Solution: Runtime O(n * n) since both the loops are dependent on the length of the array.
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         
