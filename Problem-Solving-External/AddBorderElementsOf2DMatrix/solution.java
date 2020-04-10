@@ -27,7 +27,7 @@ class solution
 					sum+=a[i][j];
 				else if(i==row-1)								//Or at the last pos. row - 1 since array index starts from 0
 					sum+=a[i][j];
-				else if(j==0)									
+				else if(j==0)									//Perform the same for column element as well
 					sum+=a[i][j];
 				else if(j==col-1)
 					sum+=a[i][j];
