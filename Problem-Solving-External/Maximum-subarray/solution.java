@@ -25,3 +25,6 @@ class Solution {
         return ans;
     }
 }
+
+1 2 -3 4 -6 
+3
