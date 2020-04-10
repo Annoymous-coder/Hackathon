@@ -4,13 +4,13 @@ class solution
 	public static void main(String args[])
 	{
 		Scanner sc = new Scanner(System.in);
-		int row = 0 , col = 0;									//row and column variables
+		int row = 0 , col = 0;		//row and column variables
 		System.out.println("Enter the row size and column size of the array");
 		row = sc.nextInt();
 		col = sc.nextInt();
 		int a[][] = new int[row][col];
 		System.out.println("Enter array elements");			
-		for(int i=0;i<row;i++)									//Take the vector/array elements
+		for(int i=0;i<row;i++)		//Take the vector/array elements
 		{
 			for(int j=0;j<col;j++)
 			{
@@ -18,15 +18,15 @@ class solution
 			}
 		}
 		System.out.println("The border array elements are:\n");
-		for(int i=0;i<row;i++)									//Traverse through the 2D array elements 
+		for(int i=0;i<row;i++)		//Traverse through the 2D array elements 
 		{
 			for(int j=0;j<col;j++)
 			{				
-				if(i==0)										//Check wheather the array element is either at 0th pos 	
+				if(i==0)	//Check wheather the array element is either at 0th pos 	
 					System.out.print(a[i][j] + "\t");
-				else if(i==row-1)								//Or at the last pos. row - 1 since array index starts from 0
+				else if(i==row-1)	 //Or at the last pos. row - 1 since array index starts from 0
 					System.out.print(a[i][j] + "\t");
-				else if(j==0)									//Perform the same for column element as well
+				else if(j==0)		//Perform the same for column element as well
 					System.out.print(a[i][j] + "\t");
 				else if(j==col-1)
 					System.out.print(a[i][j] + "\t");
