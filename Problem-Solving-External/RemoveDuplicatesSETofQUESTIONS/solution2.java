@@ -2,7 +2,7 @@
 //Logic is to keep a separate index called j for keeping track of the 
 //no of unique element present and return to main so it can display only those elements.
 //add the last element of array to unique array since it is not traversed.
-//CATCH:: PRINTS SAME NUMBER MORE THAN ONCE
+//CATCH:: PRINTS SAME NUMBER ONCE BUT ORDER IS NOT MAINTAINED.
 package practice;
 import java.util.*;
 public class RemovDuplicatesInArray {
