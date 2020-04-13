@@ -3,6 +3,8 @@
 //no of unique element present and return to main so it can display only those elements.
 //add the last element of array to unique array since it is not traversed.
 //same as solution2 but a new temp array is used therefore extra space.
+//CATCH:: PRINTS SAME NUMBER MORE THAN ONCE
+
 package practice;
 import java.util.*;
 public class RemoveDuplicatesInArray {
