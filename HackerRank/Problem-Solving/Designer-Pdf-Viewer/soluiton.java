@@ -23,6 +23,16 @@ public class Solution {
 
     }
 
+//A matrix contaning values for every character is given, so the array has 26 values having the score of every alphabet.
+//A word is given. We need to return the alphabet having maximum score * no of alphabets in the given word.
+//Ex if a matrix has 1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 as its elements and word is abc we have to output 3 * 3 = 9
+//3 for b having highest score amongst the given word and no of alpha is also 3
+//The goal of the problem is to find which character in the given word has the highest ascii value and corresponding matrix values.
+//It is all in lowercase, so we know that a is smallest having ascii value 97,
+//We set max found to 0, then we traverse through the word given.We can know the position of the given word in the 26 ele pallet by just subtracting its ascii value to 97.
+//Since 97 is start point we know for ex. e having ascii value 101 is at a distance 101 - 97 = 4 distance away from a, since matrix starts from 0 it will be in index 4 or pos 5, which is the right place of the character.
+//We do this for all the elements present and find the alpha with highest value and multiply with no of elements in the word and return the same.
+	
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
