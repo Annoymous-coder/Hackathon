@@ -2,7 +2,7 @@ package practice;
 import java.util.*;
 
 public class unionOfTwoArray {
-
+	// TODO Implement union and & of two arrays from GFG.
 	public void getUnion(int A[], int B[])
 	{
 		int maxLength = 0;
