@@ -1,3 +1,11 @@
+//Program to compare if two linked - lists have the same data inside them.
+//LOGIC IS TO FIND OUT IF THEY ARE EMPTY THEN BOTH ARE NULL SO THEY ARE SAME.
+//OR ELSE IF ONE IS EMPTY AND OTHER ONE IS NOT THEN RETURN FALSE THAT THEY ARE NOT SAME.
+//IF BOTH ARE NOT NULL THEN
+//COMPARE THE HEAD ELEMENTS FIRST 
+//RECURSIVELY CHECK THE HEAD.NEXT OF BOTH THE LISTS.
+
+
 import java.io.*;
 import java.math.*;
 import java.text.*;
@@ -67,7 +75,7 @@ public class Solution {
     if(headA!=null && headB!=null)
         {
         if(headA.data==headB.data)
-            return compareLists(headA.next,headB.next);
+            return compareLists(headA.next,headB.next);		//recursively compare if the data of both LL is the same.
         else
             return false;
     }
