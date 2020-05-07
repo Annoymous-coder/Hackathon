@@ -14,7 +14,7 @@ for line in file:
 		print("This string gets matched to the conditions\n")
 		resList.append(x)
 	else:
-		print("This string gets matched to the conditions")	
+		print("This string does not gets matched to the conditions")	
 print "\nThe extracted strings are"			
 print(resList)
 file.close()
