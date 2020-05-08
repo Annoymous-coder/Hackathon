@@ -24,6 +24,9 @@ public class Solution {
         {
             return null;
         }
+
+	//fast.next and fast.next.next is used to check if there is actually a node before reaching there in below statements to make sure the path is clear.
+	//if fast.next is null then fast.next.next is also null. So we have to use this as while condition to traverse through the nodes.
         while(fast.next!=null && fast.next.next!=null)
         {   
             slow = slow.next;
@@ -50,3 +53,9 @@ public class Solution {
         return slow;
     }
 }
+
+//LOGIC IS TO MAKE USE OF FLOYD'S CYCLE DETCTION ALGORITHM BY USING TWO POINTERS WITH DIFFERENT SPEED.
+//FIND IF THERE EXISTS A LOOP.
+//THEN MAKE ONE OF THOSE TWO POINTERS POINT TOWARDS HEAD AGAIN.
+//THEN MOVE BOTH THE POINTERS AT SAME SPEED THEN THEY MEET AT THE STARTING POINT.
+//RETURN ANY ONE OF THOSE TWO POINTERS SINCE BOTH ARE POINTING TOWARDS THE STARTING POINT.
