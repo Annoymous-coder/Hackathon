@@ -4,6 +4,9 @@ public class RecursiveSolution {
 
     public int getfibo(int n)
     {
+        int a = 0;
+        int b = 1;
+
         if(n == 0)
             return 0;
         else if(n == 1)
@@ -16,16 +19,17 @@ public class RecursiveSolution {
     {   
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Entter the nth index position of a fibonacci Sequence");
+        System.out.println("Enter the nth index position of a fibonacci Sequence");
         //Index of the fibonacci sequence . i.e Ex first n fibonacci numbers.
         int n = sc.nextInt();
 
 
         RecursiveSolution obj = new RecursiveSolution();
         
-        for(int i=0 ; i < n; i++) {
-        	System.out.println(i + " " + obj.getfibo(i));
-        }
+        long pretime = System.currentTimeMillis();
+        	System.out.println(obj.getfibo(n));
+        long posttime = System.currentTimeMillis();
+        System.out.println("Time taken to complete Recursively is " + (posttime - pretime));
         
         sc.close();
     }
