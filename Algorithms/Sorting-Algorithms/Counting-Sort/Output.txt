@@ -1,0 +1,21 @@
+0 is occuring 0 times
+1 is occuring 1 times
+2 is occuring 2 times
+3 is occuring 0 times
+4 is occuring 3 times
+5 is occuring 1 times
+6 is occuring 0 times
+7 is occuring 2 times
+8 is occuring 1 times
+9 is occuring 1 times
+Ele 0 should be at pos 0
+Ele 1 should be at pos 1
+Ele 2 should be at pos 3
+Ele 3 should be at pos 3
+Ele 4 should be at pos 6
+Ele 5 should be at pos 7
+Ele 6 should be at pos 7
+Ele 7 should be at pos 9
+Ele 8 should be at pos 10
+Ele 9 should be at pos 11
+1 2 2 4 4 4 5 7 7 8 9 
