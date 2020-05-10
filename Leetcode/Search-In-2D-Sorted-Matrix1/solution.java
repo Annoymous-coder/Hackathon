@@ -1,4 +1,4 @@
-//USING BINARY - SEARCH ALOGORITHM SINCE THE MATRIX IS SORTED.
+//USING BINARY - SEARCH ALOGORITHM SINCE THE MATRIX IS SORTED AND RELATIONSHIPS BETWEEN ROWS ARE PRESERVED.
 
 //This problem is from Leetcode named Search in sorted 2D Matrix 1.The other method of saddlsort method is present in leetcode folder and external-problem folder.
 
@@ -49,7 +49,7 @@ public boolean searchMatrix(int[][] matrix, int target) {
 			//Should move a bit further, otherwise dead loop.
 			begin = mid+1;
 		}else {
-			//
+			//Should search lower.
 			end = mid-1;
 		}
 	}
@@ -73,5 +73,3 @@ public boolean searchMatrix(int[][] matrix, int target) {
 		System.out.println(isPresent);
 	}
 }
-
-
