@@ -15,6 +15,7 @@ class FrequencyOfArray
 		}
 		System.out.println(map);
 		
+		//if already traversed make it negative 
 		for(int i=0;i<map.size();i++)
 		{
 			if(map.get(arr[i]) != -1)
