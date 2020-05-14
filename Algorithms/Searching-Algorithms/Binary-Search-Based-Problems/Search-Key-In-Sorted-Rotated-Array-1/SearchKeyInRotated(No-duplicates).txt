@@ -8,6 +8,11 @@ public class SearchInSortedRotatedArray {
 
 	public int searchElement(int a[], int low, int high, int key)
 	{	
+		
+		//Array is empty
+		if(a.length == 0)
+			return -1;
+		
 		while(low <= high)
 		{
 			int mid = (low + high)/2;
@@ -65,11 +70,11 @@ public class SearchInSortedRotatedArray {
 		
 		int a[] = {5,6,1,2,3,4};
 		
-		
+		//int a[] = {};
 		
 		SearchInSortedRotatedArray obj = new SearchInSortedRotatedArray();
 		
-		int key = 4;
+		int key = 1;
 		
 		int low = 0, high = a.length - 1;
 		
