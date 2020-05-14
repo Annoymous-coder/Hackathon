@@ -1,0 +1,70 @@
+original form
+1 2 3 4 5 6 7
+
+index
+0 1 2 3 4 5 6 
+
+rotated form
+6 7 1 2 3 4 5
+
+key = 7
+
+case1: mid == key 
+
+case2: right half is soted 
+    a) ele within range 
+    b) ele not within range (left search)
+
+case3: left half is sorted
+    a) ele within range
+    b) ele not within range (right search)
+
+low = 0 , high 6 , mid = 3 , a[mid] = 2 ,
+	case 1: 2!=7 fails
+	case 2: yes right half is sorted i.e 3,4,5
+	    a): no  within range
+	    b): yes high = mid - 1
+
+low = 0 , high = 2 , mid = 1 , a[mid] = 7 ,
+	case 1: 7==7 so pass.
+
+
+---With duplicates elements present---
+
+0,0,1,2,2,5,6 has been rotated 3 timees.
+
+0 1 2 3 4 5 6
+
+2,5,6,0,0,1,2
+
+key = 6
+
+
+case1: mid == key 
+
+case corner: a[low] == a[mid] && a[mid] == a[high]
+
+case2: right half is soted 
+    a) ele within range 
+    b) ele not within range (left search)
+
+case3: left half is sorted
+    a) ele within range
+    b) ele not within range (right search)
+
+
+low = 0 , high 6 , mid = 3 , a[mid] = 0 ,
+	case 1: 0!=2 fails
+	corner: fails
+	case 2: yes right half is sorted i.e 3,4,5
+	    a): no  within range
+	    b): yes high = mid - 1
+
+low = 0 , high = 2 , mid = 1 , a[mid] = 5 ,
+	case 1: 5!=7 fails
+	corner: fails
+	case 2: yes right half is sorted
+	    a): yes withiin range 
+		so low = mid + 1
+low = 2 , high = 2, mid = 2 , a[mid] = 6
+	case 1: 6==6 pass return mid.
