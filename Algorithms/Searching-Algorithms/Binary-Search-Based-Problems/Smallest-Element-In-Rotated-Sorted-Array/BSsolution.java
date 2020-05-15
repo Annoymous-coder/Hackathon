@@ -2,7 +2,7 @@
 //THIS PROBLEM IS SOLVED USING BINARY SEARCH APPROACH SINCE IT IS SORTED.
 //THE LOGIC IS THAT THE NUMBER OF TIMES THE ARRAY HAS BEEN ROTATED IS GIVEN BY THE INDEX OF THE SMALLEST NUMBER.
 
-//IN ORDER TO RETURN THE LEAST ELEMENT REPLACE return low and return mid by return a[low] and a[mid] respectively.
+//IN ORDER TO RETURN THE LEAST ELEMENT REPLACE return low and return mid by return a[low] and a[mid] respectively
 
 package BinarySearchBasedProblems;
 import java.util.*;
