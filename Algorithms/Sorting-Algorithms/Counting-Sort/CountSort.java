@@ -1,5 +1,6 @@
-package Algorithms;
+//COUNTING SORT IS A SORTING ALGORITHM WHICH DOES NOT COMPARE THE ELEMENTS.
 
+package Algorithms;
 public class CountingSort {
 	
 	public void sort(int a[])
