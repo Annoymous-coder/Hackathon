@@ -61,5 +61,4 @@ public class FindMinimumInRotatedSortedArray {
 		int result = obj.search(a, n);
 		System.out.println("The minimum element is present at / Sorted array has been rotated "+ result + " times / position");
 	}
-
 }
