@@ -1,6 +1,6 @@
 //Given a sorted rotated array then return the index of given key element, return -1 if not found,
 
-//This program supports duplicate elements to be present. Returns index if found else returns -1.
+//This program supports duplicate elements to be present. Returns index if found else returns -1
 
 package BinarySearchBasedProblems;
 import java.util.*;
