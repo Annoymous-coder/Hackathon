@@ -1,6 +1,6 @@
 //Given a sorted rotated array then return the index of given key element, return -1 if not found,
 
-//This program does not support duplicates, See search in sorted array 2 for duplicates.
+//This program support duplicate elements to be present. Returns index if found else returns -1.
 
 package BinarySearchBasedProblems;
 import java.util.*;
@@ -17,8 +17,6 @@ public class SearchInSortedRotatedArray {
 		{
 			int mid = (low + high)/2;
 
-	
-			
 			//case 1; When key is found directly at mid position, return mid.
 			if(a[mid] == key)
 			{
@@ -28,9 +26,11 @@ public class SearchInSortedRotatedArray {
 			//Corner case: to handle duplicate elements.
 			//Since when we rotate array with duplicate , then there are possibilities it lies same as low,mid & high
 			//So ignore that case by reducing search space.
-			if(a[mid] == a[high] && a[low] == a[mid]) {
-				low++;
+			if(a[mid] == a[high] ) {
 				high--;
+			}
+			if(a[mid] == a[low]) {
+				low++;
 			}
 			
 			//---Any one segment low-mid-1 or mid+1-high will be sorted mandatorily---
