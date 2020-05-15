@@ -1,0 +1,47 @@
+5 0 10 7 18 15 9 20 
+0 is occuring 1 times
+1 is occuring 0 times
+2 is occuring 0 times
+3 is occuring 0 times
+4 is occuring 0 times
+5 is occuring 1 times
+6 is occuring 0 times
+7 is occuring 1 times
+8 is occuring 0 times
+9 is occuring 1 times
+10 is occuring 1 times
+11 is occuring 0 times
+12 is occuring 0 times
+13 is occuring 0 times
+14 is occuring 0 times
+15 is occuring 1 times
+16 is occuring 0 times
+17 is occuring 0 times
+18 is occuring 1 times
+19 is occuring 0 times
+20 is occuring 1 times
+Ele 0 should be at pos 1
+Ele 1 should be at pos 1
+Ele 2 should be at pos 1
+Ele 3 should be at pos 1
+Ele 4 should be at pos 1
+Ele 5 should be at pos 2
+Ele 6 should be at pos 2
+Ele 7 should be at pos 3
+Ele 8 should be at pos 3
+Ele 9 should be at pos 4
+Ele 10 should be at pos 5
+Ele 11 should be at pos 5
+Ele 12 should be at pos 5
+Ele 13 should be at pos 5
+Ele 14 should be at pos 5
+Ele 15 should be at pos 6
+Ele 16 should be at pos 6
+Ele 17 should be at pos 6
+Ele 18 should be at pos 7
+Ele 19 should be at pos 7
+Ele 20 should be at pos 8
+Output before de-normalizing:
+0 5 7 9 10 15 18 20 
+Final answer :
+-10 -5 -3 -1 0 5 8 10 
