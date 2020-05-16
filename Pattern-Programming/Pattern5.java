@@ -1,10 +1,10 @@
 package PatternProgramming;
-
+import java.util.*;
 public class Pattern5 {
 
 	public static void main(String[] args) {
 	 /*
-		    *				n=5
+		    *			n=5
 		   ***
 		  *****
 		 *******
