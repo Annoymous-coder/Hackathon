@@ -5,7 +5,7 @@ public class Pattern18 {
 
 	public static void main(String[] args) {
 	 /*
-		        *
+		            *
 			   * *
 			  *   *
 			 *     *
@@ -32,7 +32,7 @@ public class Pattern18 {
 		{
 			for(int s=1; s<=n-i; s++)
 			{
-				System.out.print("_");
+				System.out.print(" ");
 			}
 			
 			System.out.print("*");
@@ -43,7 +43,7 @@ public class Pattern18 {
 				//Excluding first row print the space in this format.
 				//The range is determined by print_odd_times_top variable.
 				for(int s=1; s<=print_odd_times_top; s++) {
-					System.out.print("_");
+					System.out.print(" ");
 				}
 				
 				print_odd_times_top+=2;
@@ -66,14 +66,14 @@ public class Pattern18 {
 		{
 			for(int s=1; s<=n-i; s++)
 			{				
-				System.out.print("_");
+				System.out.print(" ");
 			}
 
 			System.out.print("*");
 			
 			if(i>1) {
 			for(int s=1; s<=print_odd_times_bottom; s++) {
-				System.out.print("_");
+				System.out.print(" ");
 			}
 			print_odd_times_bottom-=2;
 			}
