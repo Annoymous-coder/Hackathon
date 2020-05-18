@@ -1,0 +1,16 @@
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+Example 1:
+
+Input: [3,0,1]
+Output: 2
+
+Example 2:
+
+Input: [9,6,4,2,3,5,7,0,1]
+Output: 8
+
+//If sorting is allowed use Binary Search method based on in-consistency and consistency approach.
+//Bit Manipulation if sorting not allowed.
+//HashSet can also be used by comparing every set elements with 1-N elements from for loop.
+//n(n+1)/2 can also be used to find the missing number in range 1 to n. sum - n(n+1)/2 gives the missing number.
