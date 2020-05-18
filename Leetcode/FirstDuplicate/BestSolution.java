@@ -14,7 +14,8 @@ class Solution {
         throw new IllegalArgumentException("No Duplia=cate Found");
     }
 }
-
+//abs() is used in cases like these [2,1,3,5,3,2] where after the first iteration we will have [2,-1,3,5,3,2] notice here -1 is out of bounds ,
+	//In order to deal with this we use abs().
 //SPACE COMPLEXITY = O(1) CONSTANT EXTRA SPACE
 //TIME COMPLEXITY = O(N) LINEAR TIME
 //ARR = {1,2,1,3,5}
