@@ -48,6 +48,8 @@ public class FindMissingAndRepeatingNumber {
 	}
 	//Method 2
 	//Just the normal negative solution from first duplicate.
+	//abs() is used in cases like these [2,1,3,5,3,2] where after the first iteration we will have [2,-1,3,5,3,2] notice here -1 is out of bounds ,
+	//In order to deal with this we use abs().
 	//But to find the missing number just traverse again and find the positive number , its index + 1 is the missing number
 	public int[] getMissingAndRep2(int arr[])
 	{	
