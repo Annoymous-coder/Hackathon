@@ -5,10 +5,9 @@ public class Main
 { 
 	// A Binary Search based method to find the element 
 	// that appears only once 
-	
 	public static void search(int[] arr, int low, int high) 
 	{ 	
-      		Arrays.sort(nums); 
+      		Arrays.sort(nums);
 		if(low > high) 
 			return; 
 		if(low == high) 
@@ -42,10 +41,9 @@ public class Main
 
 	public static void main(String[] args) 
 	{ 
-		int[] arr = {17,12,5,-6,12,4,17,-5,2,-3,2,4,5,16,-3,-4,15,15,-4,-5,-6
-}; 	
+		int[] arr = {17,12,5,-6,12,4,17,-5,2,-3,2,4,5,16,-3,-4,15,15,-4,-5,-6}; 	
  
 		search(arr, 0, arr.length-1); 
 	}	 
 } 
-// This code is contributed by Tanisha Mittal 
+
