@@ -1,5 +1,5 @@
 
-KADANE"S ALGORITHM , DYNAMIC PROGRAMMING
+//KADANE"S ALGORITHM , DYNAMIC PROGRAMMING
 
 class Solution {
     public int maxSubArray(int[] nums) {
