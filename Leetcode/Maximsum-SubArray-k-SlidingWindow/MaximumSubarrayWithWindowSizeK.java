@@ -1,4 +1,5 @@
-
+//LOGIC IS TO TRAVERSE THE FIRST WINDOW NORMALLY AND FIND OUT THE SUM OF FIRST WINDOW,
+//THEN JUST ADD end+1 ELEMENT AND SUBTRACT end-k SINCE ONLY THESE 2 ELEMENTS DIFFER IN THE SUM FOR EVERY WINDOW.
 MaximumSubarrayWithWipackage practice;
 import java.util.*;
 public class MaximumSubarrayWithWindowSizeK {
