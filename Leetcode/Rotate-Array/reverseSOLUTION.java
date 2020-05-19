@@ -1,4 +1,5 @@
 //This program is rotate right problem, left rotation can be found at Hackerrank/problem-solving
+//This is solved using reversal algorithm
 //Find the no of rotations in a sorted rotated array.
 //TODO : IMPLEMENT THIS PROBLE USING JUGGLESORT ALGORITHM
 
