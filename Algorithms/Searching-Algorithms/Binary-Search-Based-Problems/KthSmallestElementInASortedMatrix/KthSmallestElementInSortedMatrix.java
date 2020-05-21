@@ -33,7 +33,6 @@ public class KthSmallestElementIn2DSortedMatrix {
 		return low;
 	}
 	
-	
 	public int[] getCount(int [][]nums, int searchElement)
 	{
 		int count = 0;
@@ -65,23 +64,22 @@ public class KthSmallestElementIn2DSortedMatrix {
 		}
 		System.out.println(max_value_less_than_mid + "\t" + min_value_greater_than_mid);
 		
-		
 		return new int[]{count , max_value_less_than_mid , min_value_greater_than_mid};
 	}
 	
 	public static void main(String[] args) {
 	
 		int nums[][] = {
-				{1,2},
-				{1,3}
+				{1,4,7},
+				{2,5,8},
+				{3,6,9}
 		};
 		
-		int KthSmallest = 1;
+		int KthSmallest = 5;
 		
 		KthSmallestElementIn2DSortedMatrix obj = new KthSmallestElementIn2DSortedMatrix();
 		
 		System.out.println("Kth smallest element is " + obj.getKthSmallestNumber(nums, KthSmallest));
-		
+	
 	}
-
 }
