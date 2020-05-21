@@ -56,7 +56,7 @@ public class MoveAllZeroesTowardsEnd {
 				a[i] = a[j];
 				a[j] = temp;
 			}
-			else if(a[j]!=0)
+			if(a[j]!=0)
 			{
 				j++;
 			}
