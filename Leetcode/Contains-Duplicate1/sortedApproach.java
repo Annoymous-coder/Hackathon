@@ -13,7 +13,9 @@ class Solution {
     }
 }
 
-LEETCODE PROBLEM TO CHECK IF THERE ARE DUPLICATES ELEMENTS
-sorting = O(logn)
-searching for duplicates = O(n)
-status : accepted
+//LEETCODE PROBLEM TO CHECK IF THERE ARE DUPLICATES ELEMENTS
+//sorting = O(logn)
+//searching for duplicates = O(n)
+//status : accepted
+
+//Follow up this problem can also be solved using a HashSet
