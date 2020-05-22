@@ -15,5 +15,5 @@ class Solution {
     }
 }
 
-O(n2)
-status : TIME LIMIT EXCEEDED
+//O(n2)
+//status : TIME LIMIT EXCEEDED
