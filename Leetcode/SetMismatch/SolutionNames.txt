@@ -1,0 +1,7 @@
+1.HashSet / HashMap
+2.Array instead of set using for same purpose
+2.Flip Bit(In place negative value solution)
+3.Sorting
+
+//Optimal Solution; When array is read only.
+4.Bit Manipulation
