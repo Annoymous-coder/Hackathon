@@ -1,0 +1,68 @@
+Solution
+Approach #1 (Loop and Flip) [Accepted]
+
+** Algorithm**
+
+The solution is straight-forward. We check each of the 323232 bits of the number. If the bit is 111, we add one to the number of 111-bits.
+
+We can check the ithi^{th}ith bit of a number using a bit mask. We start with a mask m=1m=1m=1, because the binary representation of 111 is,
+
+00000000000000000000000000000001 0000 0000 0000 0000 0000 0000 0000 0001 00000000000000000000000000000001 Clearly, a logical AND between any number and the mask 111 gives us the least significant bit of this number. To check the next bit, we shift the mask to the left by one.
+
+00000000000000000000000000000010 0000 0000 0000 0000 0000 0000 0000 0010 00000000000000000000000000000010
+
+And so on.
+
+Java
+
+public int hammingWeight(int n) {
+    int bits = 0;
+    int mask = 1;
+    for (int i = 0; i < 32; i++) {
+        if ((n & mask) != 0) {
+            bits++;
+        }
+        mask <<= 1;
+    }
+    return bits;
+}
+
+Complexity Analysis
+
+The run time depends on the number of bits in nnn. Because nnn in this piece of code is a 32-bit integer, the time complexity is O(1)O(1)O(1).
+
+The space complexity is O(1)O(1)O(1), since no additional space is allocated.
+Approach #2 (Bit Manipulation Trick) [Accepted]
+
+Algorithm
+
+We can make the previous algorithm simpler and a little faster. Instead of checking every bit of the number, we repeatedly flip the least-significant 111-bit of the number to 000, and add 111 to the sum. As soon as the number becomes 000, we know that it does not have any more 111-bits, and we return the sum.
+
+The key idea here is to realize that for any number nnn, doing a bit-wise AND of nnn and n-1n - 1n-1 flips the least-significant 111-bit in nnn to 000. Why? Consider the binary representations of nnn and n-1n - 1n-1.
+
+Number of 1 Bits
+
+Figure 1. AND-ing nnn and n-1n-1n-1 flips the least-significant 111-bit to 0.
+
+In the binary representation, the least significant 111-bit in nnn always corresponds to a 000-bit in n-1n - 1n-1. Therefore, anding the two numbers nnn and n-1n - 1n-1 always flips the least significant 111-bit in nnn to 000, and keeps all other bits the same.
+
+Using this trick, the code becomes very simple.
+
+Java
+
+public int hammingWeight(int n) {
+    int sum = 0;
+    while (n != 0) {
+        sum++;
+        n &= (n - 1);
+    }
+    return sum;
+}
+
+Complexity Analysis
+
+The run time depends on the number of 111-bits in nnn. In the worst case, all bits in nnn are 111-bits. In case of a 32-bit integer, the run time is O(1)O(1)O(1).
+
+The space complexity is O(1)O(1)O(1), since no additional space is allocated.
+
+Analysis written by: @noran.
