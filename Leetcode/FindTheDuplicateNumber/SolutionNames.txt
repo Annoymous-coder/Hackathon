@@ -1,0 +1,9 @@
+1.Flip Bit method if the array is not read only.
+2.Sort and linear search if array is not read only.
+3.Sort and Binary Search.
+4.Binary Search without sort.
+5.Array to keep count of all elements, if count >=2 return ele
+6.Set instead of array.
+
+All these solutions [except binary search without sorting] are useful when array is not read only.
+7. But when the array is not read only then cycle detection algorithm by Floyd is the one to choose for.
