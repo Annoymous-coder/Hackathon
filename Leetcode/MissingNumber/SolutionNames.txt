@@ -1,0 +1,13 @@
+1.Sorting
+2.HashSet
+3.Gauss Formula
+4.Sorting + Modified Binary Search
+
+//Optimal:
+5.Bit Manipulation;
+Since the numbers are present from 0 to N-1 of size N, and since no duplicates,
+are present. The N might be a missing number which we are looking for,
+If we xor N with xor of all index with respective elements, they all will cancel out and the missing element will remain.
+Example: [3,0,1]
+N = 4
+4 ^ ( 0 ^ 3 ) ^ ( 1 ^ 0) ^ (1 ^ 2). All the repeated elements will cancel out except for 2, which happens to be our answer
