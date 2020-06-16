@@ -14,3 +14,6 @@ No
 Explanation
 1) Since count of a = 1 and b = 2 in the string "abb" , It is equal to super ascii value of a=1, b=2.
 2) Since count of s = 1 , c = 2 and a = 1, It is not equal to respective super ascii values.
+
+
+--Pythogorean Intertia ( Python Programming ) RAIT IEEE Code Predators 2020--
