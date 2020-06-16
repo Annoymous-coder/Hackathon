@@ -1,0 +1,16 @@
+Given a string and number of testcases, the string is super ASCII iff the frequency
+of all the characters is equal to the ASCII value of the character.
+If the string is super ascii print "Yes" else print "No"
+The ASCII value starts from a=1, b=2...z=6 here.
+
+Input
+2
+abb scca
+
+Output 
+Yes
+No
+
+Explanation
+1) Since count of a = 1 and b = 2 in the string "abb" , It is equal to super ascii value of a=1, b=2.
+2) Since count of s = 1 , c = 2 and a = 1, It is not equal to respective super ascii values.
