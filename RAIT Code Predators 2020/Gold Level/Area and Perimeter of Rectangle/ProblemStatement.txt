@@ -1,0 +1,10 @@
+Take the length and width of rectangle in int/float inside a method and calculate and return 
+its area and perimeter in float.
+
+Input 
+2.0
+2.0
+
+Output
+4.0
+8.0
