@@ -1,0 +1,31 @@
+The problem is called as Philaland Coin Problem.
+Given a number we should make minimum use of all the coins and be able to represent
+all the numbers in the given number to 1. If $10 is given then should be able to represent all the
+values between 1$ to 10$.
+Lets start with 1$. We can only represent 1$
+Then for 2$ we are still able to represent using existing 1$.
+For 3$ if we use only 1$ it counts 3 coins since we have to minimize lets introduce a new denomination 2$
+Now combining 1$ and 2$ we can represent all value between 1$ to 2$. 
+Next new coin is introduced at $4. Now we can represent all values between (1+2+4)$ i.e till 8$.
+So next coint to be introduced is 16&.
+So till now all coins to be introduced are 0$(if given number is 0) 1$ 2$ 4$ 8$ 16$ ... and so on.
+
+We can clearly see a pattern here. Which is 2 power being incremented.
+
+So if the given number is 10$ we will be able to represent using 1$,2$,4$,8$. Therefore o/p is 4.
+This is same for a number in range 7-15.
+
+There are different methods to do this.
+
+1) Using count. 
+	Just keep adding a new denomination(which is more than sum of all denominations add till now) until its less than given number.
+	Example.
+	Start from 0.
+	In a loop from 1 to N.
+	Add i into count if its previous sum is less than n. The new number added must be greater the count sum.
+	Similar to: If N = 5. We first take 1$ then see if its less than 5% then add new coin that is 2$ for representing 3$.
+	Now check if(1$+2$) is less than N. If yes add new number which is greater than 3 which is 4$ so the count becomes (1$+2$+4$) which is 7$.
+	Now keep a flag to count the number of denominations added till now. Return that value.
+2) Using Power of 2:
+	Since we know the new coin will always be a number which is a power of 2. Keep adding a new number which is power of two until its less than or 
+	equal to the given number. Then return the no of times this loop has run.
