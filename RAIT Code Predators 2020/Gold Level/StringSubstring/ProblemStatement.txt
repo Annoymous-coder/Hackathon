@@ -1,0 +1,15 @@
+Insert substring at given pos to a given string and delete n character from pos for a given string.
+
+Input:
+
+Hello
+Awesome
+0
+Hello
+0 - pos
+2 - N(no of characters)
+
+Output:
+
+AwesomeHello
+llo
