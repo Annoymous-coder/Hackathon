@@ -1,0 +1,19 @@
+Given two sorted arrays of different sizes, m and n. Return the median of these two arrays.
+
+Input
+
+3
+1 2 3
+3
+4 5 6
+
+Output:
+
+3.5
+
+Explanation:
+
+The merge point of two sorted arrays is same as median of two sorted arrays.
+After the array has been merged. The following is the resultant array.
+1 2 3 4 5 6
+Since the average of even elements is ( nums(n/2) + nums(n/2)+1 ) / 2. i.e (3+4)/2 = 3.5
