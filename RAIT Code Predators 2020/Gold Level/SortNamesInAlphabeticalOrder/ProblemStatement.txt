@@ -1,0 +1,15 @@
+Input number of names to be sorted. Input the names in String format.
+DIsplay the names sorted in alphabetical order.
+
+Input:
+
+3
+abb
+abc
+aba
+
+Output:
+
+aba
+abb
+abc
