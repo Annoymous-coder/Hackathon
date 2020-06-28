@@ -1,0 +1,16 @@
+Given a number determine wheather it is a prime number or not.
+
+Input:
+3
+Outpur:
+True
+
+Input:
+1
+Outpur:
+False
+
+Input:
+7
+Outpur:
+True
