@@ -68,7 +68,11 @@ public class BreadthFirstSearch {
 		 * 1 0 0 1
 		 * 0 0 0 1
 		 * 
+<<<<<<< HEAD
 		 * Output = 0 1 2 3
+=======
+		 * Output = 0 1 2 3 
+>>>>>>> daff0ee6c58d035544d0dddb6ffd92808e5886ae
 		 * 
 		 */
 		
