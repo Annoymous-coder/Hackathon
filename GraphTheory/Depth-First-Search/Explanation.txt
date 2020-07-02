@@ -1,6 +1,6 @@
-BREADTH FIRST SEARCH
+DEPTH FIRST SEARCH
 
-As the name goes the BFS algorithm completes its searching pattern until it reaches a node 
+As the name goes the DFS algorithm completes its searching pattern until it reaches a node 
 which does not further have any neighbouring nodes or until it reaches dead-nodes. 
 		
 /* n = 4

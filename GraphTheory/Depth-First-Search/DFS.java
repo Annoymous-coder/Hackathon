@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class BreadthFirstSearch {
+public class DepthFirstSearch {
 
 	public void bfs(int[][] adjmatrix, int n) {
 
@@ -79,7 +79,7 @@ public class BreadthFirstSearch {
 			}
 		}
 
-		BreadthFirstSearch obj = new BreadthFirstSearch();
+		DepthFirstSearch obj = new DepthFirstSearch();
 		obj.bfs(adjMatrix, n);
 
 	}
