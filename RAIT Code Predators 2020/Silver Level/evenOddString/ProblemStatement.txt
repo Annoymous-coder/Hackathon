@@ -1,0 +1,14 @@
+Given a string print all its even characters first then print all its odd characters.
+Here even/odd characters means the characters at odd/even indices.
+
+Input:
+
+Hello 
+
+Output:
+
+e
+l
+H
+l
+o
