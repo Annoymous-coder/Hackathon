@@ -1,7 +1,7 @@
 BREADTH FIRST SEARCH
 
-As the name goes the BFS algorithm completes its searching pattern until it reaches a node 
-which does not further have any neighbouring nodes or until it reaches dead-nodes. 
+As the name goes the BS algorithm completes its searching pattern until it reaches all children node of root or source 
+then proceeds towards grand-children. Works like layer by layer.
 		
 /* n = 4
 * 
@@ -10,7 +10,7 @@ which does not further have any neighbouring nodes or until it reaches dead-node
 * 1 0 0 1
 * 0 0 0 1
 * 
-* Output = 0 2 3 1
+* Output = 0 1 2 3 
 * 
 */
 		
@@ -23,16 +23,17 @@ So in the above adjaceny matrix if 0 is the source node, then we can assume that
 3 0 0 0 1
  
 the node 0 is a connected to 1 and 2 which happens to be its children in tree-terminology.
-Out of 1 and 2 bfs algorithm chooses any one and traverse through all of their children. 
-But according to structured implementation it will choose the last found children in this case 2.
-So order till now is 0 2.
+Out of 1 and 2 bfs algorithm chooses any one and prints it. Here since we are using queue it uses 1, which comes first.
+So order till now is 0 1.
+Since 1 has no children to be added to the queue it moves to 2.
+Then it prints 2 and gets dequeued.
 2 is connected to 0 and 3, since 0 is already visited we do not take into consideration.
-add 3 to our list , it is 1 3 since 0 and 2 are already printed.
+add 3 to our list , it is 3 since 0 1 and 2 are already printed.
 We look for children of 3 since its connected with itself, we skip it. We have reached to dead node.
-So the order will be 0 2 3 1. 
-Basically what BFS does is looks for children of a node, if it has then chooses any one and keeps going until it reaches the leaf node.
+So the order will be 0 1 2 3 
+Basically what BFS does is looks for children of a node, if it has then prints all of them.
 and then comes back to the other children and does the same.
-Since we remove the last found element we make use of Stack data structure here.
+Since we remove the first found element we make use of Queue data structure here.
 
 Simulation of above graph:
 
@@ -46,4 +47,4 @@ First visit the source node which is 0. (can be anything) and update visited[0] 
 
 Iterate,
 check for neighbouring nodes for "node" and should not be visited before, i.e check if adjmatrix[node][0/1/2/3] = 1 and visited[0/1/2/3]!=1. If yes add to the stack.
-check if the stack is empty after every addition is completed. Since its not, pop the last node and assign its value to "node" variable and repeat this process.
+check if the stack is empty after every addition is completed. Since its not, dequeue the last node and assign its value to "node" variable and repeat this process.
