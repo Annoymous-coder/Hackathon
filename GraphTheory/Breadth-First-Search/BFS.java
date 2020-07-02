@@ -1,10 +1,11 @@
 package GraphTheory;
 
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class DepthFirstSearch {
+public class BreadthFirstSearch {
 
 	public void bfs(int[][] adjmatrix, int n) {
 
@@ -15,17 +16,17 @@ public class DepthFirstSearch {
 		}
 
 		// BFS uses stack to maintain its search pattern.
-		Stack<Integer> stack = new Stack<Integer>();
+		Queue<Integer> queue = new LinkedList<Integer>();
 
 		// Add the first element(source node mentioned otherwise) to the stack.
-		stack.push(0);
+		queue.add(0);
 
 		// Update the first node as visited.
 		visited[0] = 1;
 
 		// Pop the first node and print it.
 		// Node holds the value of last popped node, for checking its adjacent node.
-		int node = (int) stack.pop();
+		int node = (int) queue.remove();
 		System.out.println(node);
 
 		while (true) {
@@ -36,18 +37,18 @@ public class DepthFirstSearch {
 			for (int i = 0; i < n; i++) {
 				if (adjmatrix[node][i] == 1 && visited[i] != 1) {
 					visited[i] = 1;
-					stack.push(i);
+					queue.add(i);
 				}
 			}
 			
 			// Continue this infinite loop until the stack is empty.
-			if (stack.isEmpty()) {
+			if (queue.isEmpty()) {
 				break;
 			
 			// Once when no more neighburing nodes are present, this block is executed pop the last value only.
 			// Again next for loop block will be executed.	
 			} else {
-				node = (int) stack.pop();
+				node = (int) queue.remove();
 				System.out.println(node);
 			}
 		}
@@ -67,7 +68,7 @@ public class DepthFirstSearch {
 		 * 1 0 0 1
 		 * 0 0 0 1
 		 * 
-		 * Output = 0 2 3 1
+		 * Output = 0 1 2 3
 		 * 
 		 */
 		
@@ -79,7 +80,7 @@ public class DepthFirstSearch {
 			}
 		}
 
-		DepthFirstSearch obj = new DepthFirstSearch();
+		BreadthFirstSearch obj = new BreadthFirstSearch();
 		obj.bfs(adjMatrix, n);
 
 	}
