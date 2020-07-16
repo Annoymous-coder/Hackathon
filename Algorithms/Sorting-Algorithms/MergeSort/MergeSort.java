@@ -18,12 +18,15 @@ public class MergeSortAlgorithm {
 		
 		for(int j=0; j<right.length; j++)
 		{   
+			// j starts from 0, but not for nums. It has continue whats finished from left part.
 			right[j] = nums[j+mid];
 		}
 		
 		MergeSort(left);
 		MergeSort(right);
 		Merge(left, right, nums);
+		
+		
 		
 	}
 	public int[] Merge(int left[], int right[], int nums[])
@@ -52,9 +55,6 @@ public class MergeSortAlgorithm {
 			nums[k++] = right[j++];
 		}
 		
-		/*for(int ele: nums)
-			System.out.print(ele + " ");
-*/
 		return nums;
 	}
 	
@@ -78,3 +78,39 @@ public class MergeSortAlgorithm {
 	}
 
 }
+
+
+/* Stack calls order for {4 3 2 1} [LIFO] order. So the first stack call is at the bottom.
+ * 		  
+ *   4 3 2 1
+ *  4 3   
+ * 4   
+ * 
+ *   4 3 2 1
+ *  4 3   
+ * 4   3
+ * 
+ *   4 3 2 1
+ *  3 4   
+ * 3   4
+ *
+ *   4 3 2 1
+ *  3 4   2 1 
+ * 3   4 2 
+ * 
+ *   4 3 2 1
+ *  3 4   2 1 
+ * 3   4 2   1
+ * 
+ *   4 3 1 2
+ *  3 4   1 2 
+ * 3   4 1   2
+ * 
+ *   1 2 3 4
+ *  3 4   1 2 
+ * 3   4 1   2
+ * 
+ * The order of completion is strictly downwards. First finish all left then backtrack to previous 
+ * call stack which might be right , later merge for the original left subtree. This process is also 
+ * repeated for right hand side of the tree[call stack]. Uses DFS + LIFO approach because of recursive call.
+*/
