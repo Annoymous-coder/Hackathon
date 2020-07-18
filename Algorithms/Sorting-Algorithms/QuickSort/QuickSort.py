@@ -41,3 +41,4 @@ QuickSort(nums,0,len(nums)-1)
 print("After Quick Sort:", end = "\n")
 for number in nums:
     print(number, end = " ")
+    
