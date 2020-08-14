@@ -1,5 +1,19 @@
 import random as r
 
+def QuickSort(nums, beg, end):
+    if beg < end:
+        RandomizedPartitionIndex = Partition(nums, beg, end)
+        QuickSort(nums, beg, RandomizedPartitionIndex-1)
+        QuickSort(nums, RandomizedPartitionIndex+1, end)
+
+# Randomized Partition is done to reduce the probability of getting unbalanced separation by partitionIndex.
+def RandomizedPartition(nums, beg, end):
+    # Get a random number in range[beg,end] and swap with end element, to continue calling the general Partition Method.
+    randomePivotIndex = r.randint(beg,end)
+    nums[randomePivotIndex],nums[end] = nums[end],nums[randomePivotIndex]
+    Partition(nums,beg,end)
+
+# Lomuto's Partition Method
 def Partition(nums, beg, end):
     pivot = nums[end]
     pivotIndex = beg
@@ -9,12 +23,6 @@ def Partition(nums, beg, end):
             pivotIndex+=1
     nums[pivotIndex],nums[end] = nums[end],nums[pivotIndex]
     return pivotIndex
-
-def QuickSort(nums, beg, end):
-    if beg < end:
-        partitionIndex = Partition(nums, beg, end)
-        QuickSort(nums, beg, partitionIndex-1)
-        QuickSort(nums, partitionIndex+1, end)
 
 N = int(input("Enter the size of the array \n"))
 nums = [0]*N
@@ -33,3 +41,4 @@ QuickSort(nums,0,len(nums)-1)
 print("After Quick Sort:", end = "\n")
 for number in nums:
     print(number, end = " ")
+    
