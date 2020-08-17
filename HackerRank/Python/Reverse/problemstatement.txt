@@ -1,0 +1,5 @@
+Given a string , reverse the words and swap their cases.
+Input:
+Str = "coDing IS AweSome"
+Output:
+Str = "aWEsOME is COdING"
