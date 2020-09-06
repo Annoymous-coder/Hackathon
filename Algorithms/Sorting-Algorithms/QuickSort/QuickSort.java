@@ -22,7 +22,7 @@ public class QuickSortAlgorithm {
 		int temp = nums[randomPivotIndex];
 		nums[randomPivotIndex] = nums[end];
 		nums[end] = temp;	
-     	Partition(nums, beg, end);
+     		Partition(nums, beg, end);
 	}
 	
 	// This partition algorithm is Lomuto's Partition schema.
